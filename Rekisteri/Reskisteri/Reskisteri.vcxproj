@@ -110,21 +110,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\minna.hannula\vko44\t1-t4\Henkilo.cpp" />
     <ClCompile Include="..\..\..\minna.hannula\vko44\t1-t4\Koulu.cpp" />
     <ClCompile Include="..\..\..\minna.hannula\vko44\t1-t4\Koulutusohjelma.cpp" />
     <ClCompile Include="..\..\..\minna.hannula\vko44\t1-t4\Opettaja.cpp" />
     <ClCompile Include="..\..\..\minna.hannula\vko44\t1-t4\Opiskelija.cpp" />
     <ClCompile Include="..\..\..\minna.hannula\vko44\t1-t4\Source.cpp" />
     <ClCompile Include="..\..\..\minna.hannula\vko44\t1-t4\Sovellus.cpp" />
+    <ClCompile Include="Henkilo.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\minna.hannula\vko44\t1-t4\Henkilo.h" />
     <ClInclude Include="..\..\..\minna.hannula\vko44\t1-t4\Koulu.h" />
     <ClInclude Include="..\..\..\minna.hannula\vko44\t1-t4\Koulutusohjelma.h" />
     <ClInclude Include="..\..\..\minna.hannula\vko44\t1-t4\Opettaja.h" />
     <ClInclude Include="..\..\..\minna.hannula\vko44\t1-t4\Opiskelija.h" />
     <ClInclude Include="..\..\..\minna.hannula\vko44\t1-t4\Sovellus.h" />
+    <ClInclude Include="Henkilo.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
