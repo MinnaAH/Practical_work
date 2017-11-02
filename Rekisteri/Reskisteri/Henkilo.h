@@ -5,8 +5,7 @@ class Henkilo
 {
 public:
 	Henkilo();
-	Henkilo(string etunimi, string sukunimi, string osoite,
-		string puhelinnumero);
+	Henkilo(string etunimi, string sukunimi, string osoite, string puhelinnumero);
 	Henkilo(const Henkilo& alkup);
 	~Henkilo();
 	string annaEtunimi() const;
