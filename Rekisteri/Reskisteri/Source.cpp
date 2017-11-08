@@ -2,7 +2,7 @@
 
 int main()
 {
-	Sovellus sovellus;
+	Sovellus sovellus; //Sovellus olio
 	sovellus.aja();
 	return 0;
 }

@@ -5,7 +5,7 @@ using std::cout; using std::cin; using std::endl;
 
 
 
-Koulu::Koulu(): nimi_(), koulutusohjelmat_()
+Koulu::Koulu() : nimi_(), koulutusohjelmat_()
 {
 }
 
@@ -23,7 +23,7 @@ string Koulu::annaNimi() const
 	return nimi_;
 }
 
-void Koulu::asetaNimi(string nimi) 
+void Koulu::asetaNimi(string nimi)
 {
 	nimi_ = nimi;
 }
@@ -36,7 +36,7 @@ void Koulu::tulostaKoulutusohjelmat()
 		cout << koulutusohjelmat_[i].annaNimi() << endl;
 }
 
-void Koulu::lisääKoulutusohjelma()
+void Koulu::lisaaKoulutusohjelma()
 {
 	string nimi;
 	cout << "Anna koulutusohjelman nimi: ";
@@ -53,12 +53,10 @@ void Koulu::tulostaKoulutusohjelmienMaara() const
 void Koulu::lisaaKoulutusohjelmaanOpettaja()
 {
 	int indeksi = etsiKoulutusohjelma();
-	if (indeksi >= 0)
+	if (indeksi >= 0) //Tarkistetaan onko kouluutusohjelma olemassa, jotta opettaja voidaan lisata koulutusohjelmaan
 	{
 		koulutusohjelmat_[indeksi].lisaaOpettaja();
 	}
-	else
-		cout << "Koulutusohjelmaa ei loytynyt!" << endl;
 }
 
 void Koulu::tulostaKoulutusohjelmanOpettajat() const
@@ -68,8 +66,6 @@ void Koulu::tulostaKoulutusohjelmanOpettajat() const
 	{
 		koulutusohjelmat_[indeksi].tulostaOpettajat();
 	}
-	else
-		cout << "Koulutusohjelmaa ei loytynyt!" << endl;
 }
 
 void Koulu::lisaaKoulutusohjelmaanOpiskelija()
@@ -79,8 +75,6 @@ void Koulu::lisaaKoulutusohjelmaanOpiskelija()
 	{
 		koulutusohjelmat_[indeksi].lisaaOpiskelija();
 	}
-	else
-		cout << "Koulutusohjelmaa ei loytynyt!" << endl;
 }
 
 void Koulu::tulostaKoulutusohjelmanOpiskelijat() const
@@ -90,16 +84,27 @@ void Koulu::tulostaKoulutusohjelmanOpiskelijat() const
 	{
 		koulutusohjelmat_[indeksi].tulostaOpiskelijat();
 	}
-	else
-		cout << "Koulutusohjelmaa ei loytynyt!" << endl;
 }
 
 void Koulu::poistaKoulutusohjelma()
 {
 	int indeksi = etsiKoulutusohjelma();
 	if (indeksi >= 0)
-		koulutusohjelmat_.erase(koulutusohjelmat_.begin()+ indeksi);
-	cout << indeksi << endl;
+		koulutusohjelmat_.erase(koulutusohjelmat_.begin() + indeksi);
+}
+
+void Koulu::poistaOpettaja()
+{
+	int indeksi = etsiKoulutusohjelma();
+	if (indeksi >= 0)
+		koulutusohjelmat_[indeksi].poistaOpettaja();
+}
+
+void Koulu::poistaOpiskelija()
+{
+	int indeksi = etsiKoulutusohjelma();
+	if (indeksi >= 0)
+		koulutusohjelmat_[indeksi].poistaOpiskelija();
 }
 
 
@@ -110,7 +115,8 @@ int Koulu::etsiKoulutusohjelma() const
 	getline(cin, nimi);
 	for (unsigned int i = 0; i < koulutusohjelmat_.size(); i++) {
 		if (nimi == koulutusohjelmat_[i].annaNimi())
-			return i; //Palauttaa koulutusohjelman}
+			return i; //Palauttaa etsityn koulutusohjelman
 	}
-	return -1; //Koulutusohjelmaa ei löytynyt, jolloin palautetaan -1
+	cout << "Koulutusohjelmaa ei loytynyt!" << endl; //Jos koulutusohjelmaa ei loytynyt, ohjelma ilmoittaa siitä ja palauttaa arvon -1
+	return -1;
 }

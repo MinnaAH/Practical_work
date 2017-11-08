@@ -17,8 +17,13 @@ public:
 	void lisaaOpiskelija();
 	void tulostaOpettajat() const;
 	void tulostaOpiskelijat() const;
+	void poistaOpettaja();
+	void poistaOpiskelija();
+
 private:
 	string nimi_;
 	vector <Opiskelija> opiskelijat_;
 	vector <Opettaja> opettajat_;
+	int etsiOpettaja() const;
+	int etsiOpiskelija() const;
 };

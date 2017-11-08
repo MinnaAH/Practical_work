@@ -27,7 +27,7 @@ string Opettaja::annaEnimi()
 	return enimi_;
 }
 
-string Opettaja::annaSnimi() 
+string Opettaja::annaSnimi()
 {
 	return snimi_;
 }
@@ -71,5 +71,5 @@ void Opettaja::kysyTiedot()
 
 void Opettaja::tulosta() const
 {
-	cout << tunnus_ << " " << enimi_ << " " << snimi_ << " " << palkka_ << endl;
+	cout <<"Opettaja: " << tunnus_ << ", " << enimi_ << ", " << snimi_ << ", " << palkka_ << endl;
 }

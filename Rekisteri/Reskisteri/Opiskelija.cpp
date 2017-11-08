@@ -7,7 +7,7 @@ Opiskelija::Opiskelija()
 {
 }
 
-Opiskelija::Opiskelija(string num, string enimi, string snimi, string email):
+Opiskelija::Opiskelija(string num, string enimi, string snimi, string email) :
 	num_(num), enimi_(enimi), snimi_(snimi), email_(email)
 {
 }
@@ -70,5 +70,5 @@ void Opiskelija::kysyTiedot()
 
 void Opiskelija::tulosta() const
 {
-	cout << "Opiskelija: " << num_ << " " << enimi_ << " " << snimi_ << " " << email_ << endl;
+	cout << "Opiskelija: " << num_ << ", " << enimi_ << ", " << snimi_ << ", " << email_ << endl;
 }

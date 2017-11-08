@@ -18,7 +18,7 @@ void Sovellus::aja() const
 	string valinta = tulostaValikko(); 
 	
 	if (valinta == "1")
-		tamk.lis‰‰Koulutusohjelma();
+		tamk.lisaaKoulutusohjelma();
 	else if (valinta == "2")
 		tamk.tulostaKoulutusohjelmat();
 	else if (valinta == "3")
@@ -33,6 +33,10 @@ void Sovellus::aja() const
 		tamk.tulostaKoulutusohjelmanOpiskelijat();
 	else if (valinta == "8")
 		tamk.poistaKoulutusohjelma();
+	else if (valinta == "9")
+		tamk.poistaOpettaja();
+	else if (valinta == "10")
+		tamk.poistaOpiskelija();
 	else if (valinta == "0")
 		break;
 	else
@@ -43,6 +47,7 @@ void Sovellus::aja() const
 string Sovellus::tulostaValikko() const
 {
 	string valinta;
+	//Kayttoliittyma
 	cout << "1) Lisaa koulutusohjelma" << endl;
 	cout << "2) Tulosta koulutusohjelmien nimet" << endl;
 	cout << "3) Tulosta koulutusohjelmien maara" << endl;
@@ -51,6 +56,8 @@ string Sovellus::tulostaValikko() const
 	cout << "6) Lisaa koulutusohjelmaan opiskelija" << endl;
 	cout << "7) Tulosta koulutusohjelman opiskelijat" << endl;
 	cout << "8) Poista koulutusohjelma" << endl;
+	cout << "9) Poista opettaja" << endl;
+	cout << "10) Poista opiskelija" << endl;
 	cout << "0) Lopeta" << endl;
 	cout << "Syota valinta: ";
 	getline(cin, valinta);

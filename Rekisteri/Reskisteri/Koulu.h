@@ -14,15 +14,17 @@ public:
 	~Koulu();
 	string annaNimi() const;
 	void asetaNimi(string nimi);
-	//harkkatyo valikkoa
-	void tulostaKoulutusohjelmat(); 
-	void lis‰‰Koulutusohjelma();
+	//Kayttoliittyman valikon toiminnat
+	void lisaaKoulutusohjelma();
+	void tulostaKoulutusohjelmat();
 	void tulostaKoulutusohjelmienMaara() const;
 	void lisaaKoulutusohjelmaanOpettaja();
 	void tulostaKoulutusohjelmanOpettajat() const;
 	void lisaaKoulutusohjelmaanOpiskelija();
 	void tulostaKoulutusohjelmanOpiskelijat() const;
 	void poistaKoulutusohjelma();
+	void poistaOpettaja();
+	void poistaOpiskelija();
 private:
 	string nimi_;
 	vector<Koulutusohjelma> koulutusohjelmat_;
