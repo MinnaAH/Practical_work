@@ -110,6 +110,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\minna.hannula\Harjoitustyo\Harjoitustyo\Tyontekija.cpp" />
     <ClCompile Include="..\..\..\minna.hannula\vko44\t1-t4\Koulu.cpp" />
     <ClCompile Include="..\..\..\minna.hannula\vko44\t1-t4\Koulutusohjelma.cpp" />
     <ClCompile Include="..\..\..\minna.hannula\vko44\t1-t4\Opettaja.cpp" />
@@ -119,6 +120,7 @@
     <ClCompile Include="Henkilo.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\minna.hannula\Harjoitustyo\Harjoitustyo\Tyontekija.h" />
     <ClInclude Include="..\..\..\minna.hannula\vko44\t1-t4\Koulu.h" />
     <ClInclude Include="..\..\..\minna.hannula\vko44\t1-t4\Koulutusohjelma.h" />
     <ClInclude Include="..\..\..\minna.hannula\vko44\t1-t4\Opettaja.h" />

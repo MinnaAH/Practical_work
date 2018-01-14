@@ -36,6 +36,9 @@
     <ClCompile Include="Henkilo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\minna.hannula\Harjoitustyo\Harjoitustyo\Tyontekija.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\minna.hannula\vko44\t1-t4\Koulu.h">
@@ -54,6 +57,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Henkilo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\minna.hannula\Harjoitustyo\Harjoitustyo\Tyontekija.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
