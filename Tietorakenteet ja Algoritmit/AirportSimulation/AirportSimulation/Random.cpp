@@ -1,0 +1,77 @@
+/*
+Tietorakenteet ja algoritmit -  2. harjoitystyö
+Minna Hannula
+*/
+#include "Random.h"
+#include <limits.h>
+#include<math.h>
+#include<time.h>
+
+const int max_int = INT_MAX;
+
+Random::Random(bool pseudo)
+/*
+Pre: None
+Post: Teh values of seed, add_on and multiplier are initialized.
+The seed is initialized randomly only if pseudo == false
+*/
+{
+	if (pseudo)
+		seed = 1;
+	else
+		seed = time(NULL) % max_int;
+
+	multiplier = 2743;
+	add_on = 5923;
+}
+double Random::random_real()
+/*
+Pre: None
+Post: A random real number between 0 and 1 is returned
+*/
+{
+	double max = max_int + 1.0;
+	double temp = reseed();
+	if (temp < 0)
+		temp = temp + max;
+
+	return temp / max;
+}
+
+int Random::random_integer(int low, int high)
+/*
+Pre: None
+Post: A random integer between low and high (inclusive) is returned
+*/
+{
+	if (low > high)
+		return random_integer(high, low);
+	else
+		return ((int)((high - low + 1)*random_real())) + low;
+
+}
+int Random::poisson(double mean)
+/*Pre:None
+Post: A random integer, reflecting a Poisson distribution with parameter mean, is returned
+*/
+{
+	double limit = exp(-mean);
+	double product = random_real();
+	int count = 0;
+	while (product > limit) {
+		count++;
+		product *= random_real();
+	}
+
+	return count;
+}
+
+int Random::reseed()
+/*
+Pre: None
+Post: The seed is replaced by a pseudorandom successor
+*/
+{
+	seed = seed * multiplier + add_on;
+	return seed;
+}
